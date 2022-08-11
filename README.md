@@ -8,6 +8,12 @@ http://localhost:5000/api/users
 http://localhost:5000/api/users/{id}
 # Create new User
 http://localhost:5000/api/users
+into body:
+{
+"name":"John Smith",
+"age":45
+}
+id wil auto created and createOn is created time (defalut) 
 # Update User
 http://localhost:5000/api/users/{id}
 # Delete User
