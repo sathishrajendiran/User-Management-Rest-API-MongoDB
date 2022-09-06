@@ -20,6 +20,10 @@ const getOneUser = async (req, res) => {
   }
 };
 const createUser = async (req, res) => {
+  if (!req.body.name) {
+    res.status(404).json({ message: "name is required" });
+    return;
+  }
   try {
     const newUser = new User({
       id: uuid4(),
